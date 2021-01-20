@@ -1,15 +1,17 @@
+# coding: utf-8
+# -*- coding: utf-8 -*-
 import random
 import pprint
 
 class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    HEADER = u'\033[95m'
+    OKBLUE = u'\033[94m'
+    OKGREEN = u'\033[92m'
+    WARNING = u'\033[93m'
+    FAIL = u'\033[91m'
+    ENDC = u'\033[0m'
+    BOLD = u'\033[1m'
+    UNDERLINE = u'\033[4m'
 
 
 class Person:
@@ -97,11 +99,11 @@ class Person:
         bar_ticks = (self.hp / self.maxhp) * 100 / 2
 
         while bar_ticks > 0:
-            hp_bar += "█"
+            hp_bar += u"█"
             bar_ticks -= 1
 
         while len(hp_bar) < 50:
-            hp_bar += " "
+            hp_bar += u" "
 
         hp_string = str(self.hp) + "/" + str(self.maxhp)
         current_hp = ""
@@ -129,14 +131,14 @@ class Person:
         mp_ticks = (self.mp / self.maxmp) * 100 / 10
 
         while bar_ticks > 0:
-            hp_bar += "█"
+            hp_bar += u"█"
             bar_ticks -= 1
 
         while len(hp_bar) < 25:
-            hp_bar += " "
+            hp_bar += u" "
 
         while mp_ticks > 0:
-            mp_bar += "█"
+            mp_bar += u"█"
             mp_ticks -= 1
 
         while len(mp_bar) < 10:
